@@ -95,7 +95,7 @@ Following are sample queries that you can use to help you monitor your Azure Eve
     | where TimeGenerated > ago(7d)
     | where ResourceProvider =="MICROSOFT.EVENTHUB"
     | where Category == "OperationalLogs"
-    | summarize count() by "EventName"
+    | summarize count() by EventName_s
 
 + Get runtime audit logs generated in the last one hour. 
 
